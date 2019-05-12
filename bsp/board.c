@@ -18,19 +18,6 @@ void NVIC_Configuration(void)
 //    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
 }
 
-/**
-* @brief  Inserts a delay time.
-* @param  nCount: specifies the delay time length.
-* @retval None
-*/
-static void Delay(__IO uint32_t nCount)
-{
-	/* Decrement nCount value */
-	while (nCount != 0)
-	{
-		nCount--;
-	}
-}
 
 
 static void SYSCTRL_Configuration(void)
@@ -78,7 +65,7 @@ void SysTick_Handler(void)
 	rt_interrupt_leave();
 }
 /**
- * This function will initial STM32 board.
+ * This function will initial HC32 board.
  */
 void rt_hw_board_init()
 {

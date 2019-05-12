@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\MDK;..\app;..\Library\common;..\Library\inc;..\rt_thread;..\rt_thread\kernel;..\rt_thread\libcpu\arm\common;..\rt_thread\libcpu\arm\cortex-m0;..\rt_thread\components\finsh;..\rt_thread\include;..\Drivers\inc</IncludePath>
+              <IncludePath>..\MDK;..\app;..\Library\common;..\Library\inc;..\rt_thread;..\rt_thread\kernel;..\rt_thread\libcpu\arm\common;..\rt_thread\libcpu\arm\cortex-m0;..\rt_thread\components\finsh;..\rt_thread\include;..\bsp\inc;..\rt_thread\components\drivers\include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -385,7 +385,12 @@
             <File>
               <FileName>board.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\board.c</FilePath>
+              <FilePath>..\bsp\board.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp\bsp_uart.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -676,6 +681,43 @@
         </Group>
         <Group>
           <GroupName>DeviceDrivers</GroupName>
+          <Files>
+            <File>
+              <FileName>serial.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\rt_thread\components\drivers\serial\serial.c</FilePath>
+            </File>
+            <File>
+              <FileName>completion.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\rt_thread\components\drivers\src\completion.c</FilePath>
+            </File>
+            <File>
+              <FileName>dataqueue.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\rt_thread\components\drivers\src\dataqueue.c</FilePath>
+            </File>
+            <File>
+              <FileName>pipe.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\rt_thread\components\drivers\src\pipe.c</FilePath>
+            </File>
+            <File>
+              <FileName>ringbuffer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\rt_thread\components\drivers\src\ringbuffer.c</FilePath>
+            </File>
+            <File>
+              <FileName>waitqueue.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\rt_thread\components\drivers\src\waitqueue.c</FilePath>
+            </File>
+            <File>
+              <FileName>workqueue.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\rt_thread\components\drivers\src\workqueue.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>finsh</GroupName>
